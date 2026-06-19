@@ -1,0 +1,6 @@
+{
+  "name": "Patrimonio Pro",
+  "description": "Sistema Integrado de control de patrimonio en dólares y bolívares con tasas de cambio al día (BCV y Paralelo).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

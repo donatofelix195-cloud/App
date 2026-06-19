@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Patrimonio Pro</title>
+    
+    <!-- PWA & Mobile Optimization Headers -->
+    <meta name="theme-color" content="#070a13" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="./icon-512.png" />
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+    
+    <!-- Service Worker Client Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('Service Worker registrado con éxito:', reg.scope))
+            .catch((err) => console.warn('Service Worker falló en registrarse:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
+
